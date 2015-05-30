@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title> Test Time</title>
+<link href="css/bootstrap-combined.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+<script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.pt-BR.js"></script>
+<script>
+ function showdata() 
+{
+    var timeFR = $("#datetime").val();
+    document.getElementById("showtime").innerHTML = timeFR;
+}
+</script>
+
+
+</head>
+<body>
+
+    <div class="well">
+  <div id="datetimepicker1" class="input-append date">
+    <input id="datetime" data-format="yyyy-MM-dd hh:mm:ss" type="text"></input>
+    <span class="add-on">
+      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+      </i>
+    </span>
+  </div>
+  <button onclick='showdata()'> OK </button>
+</div>
+<script type="text/javascript">
+  $(function() {
+    $('#datetimepicker1').datetimepicker({
+      language: 'en'
+    });
+  });
+</script>
+
+<div id="showtime"></div>
+
+</body>
+</html>
